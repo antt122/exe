@@ -30,8 +30,8 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserService {
 
-  UserRepository userRepository;
-  UserMapper userMapper;
+  final UserRepository userRepository;
+  final UserMapper userMapper;
 
     public User createUser(UserCreationRequest request){
 

@@ -35,7 +35,7 @@ import java.util.StringJoiner;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @Service
 public class AuthenticationService {
-    UserRepository userRepository;
+    final  UserRepository userRepository;
 
     @NonFinal //ko inject vao constructor
     @Value( "${jwt.signerKey}")

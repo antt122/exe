@@ -23,7 +23,7 @@ import java.util.List;
 @Slf4j
 public class UserController {
 
-    private UserService userService;
+     UserService userService;
     @PostMapping
     ApiResponse<User> createUser(@RequestBody @Valid UserCreationRequest request){
         ApiResponse<User> response = new ApiResponse<>();
