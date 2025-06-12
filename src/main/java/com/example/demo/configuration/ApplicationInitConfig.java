@@ -1,7 +1,7 @@
 package com.example.demo.configuration;
 
 import com.example.demo.entity.User;
-import com.example.demo.enums.Role;
+import com.example.demo.enums.Status;
 import com.example.demo.repository.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -26,11 +26,11 @@ public class ApplicationInitConfig {
         return args -> {
             if (userRepository.findByUsername("admin").isEmpty()) {
                 var roles = new HashSet<String>();
-                roles.add(Role.ADMIN.name());
+//                roles.add()
                 User user = User.builder()
                         .username("admin")
                         .password(passwordEncoder.encode("Admin.123"))
-                        .roles(roles)
+//                        .roles(roles)
                         .build();
                 userRepository.save(user);
 

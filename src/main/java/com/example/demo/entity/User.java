@@ -27,8 +27,10 @@ public class User {
      String firstname;
      String lastname;
      LocalDate dob;
-     Set<String> roles;
      Status status;
+
+        @ManyToMany()
+     Set<Role> roles;
 
 
 }
